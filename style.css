@@ -1,0 +1,120 @@
+
+:root {
+            --color-primary: #ab79d6;
+            --color-secondary: #d367c1;
+            --color-background: #27272c;
+            --color-yellow: #dedf40;
+            --color-green: #62cb5c;
+            --color-blue: #00bbcb;
+            --gradient: var(--color-secondary) 10%, var(--color-yellow) 25%, var(--color-green) 50%, var(--color-blue) 75%, var(--color-primary) 90%;
+        }
+
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        *::selection{
+            background-color: var(--color-yellow);
+            color: var(--color-background);
+        }
+        html{
+            height: 100%;
+            width: 100%;
+            font-size: 62.5%;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--color-background);
+            -o-border-image: linear-gradient(to right, var(--gradient)) 1;
+            border-image: linear-gradient(to right, var(--gradient)) 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            height: 95vh;
+            max-width: 60rem;
+            background-image: linear-gradient(45deg,var(--gradient));
+            padding: 5px;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-background);
+            padding: 8px 3rem;
+            position: relative;
+        }
+        .container h1{
+            text-align: center;
+            font-size: 5rem;
+            color: var(--color-primary);
+            font-weight: 900;
+            margin-top: 10px;
+            position: relative;
+        }
+       
+        .fillInput{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        input{
+            flex: 0.6;
+            height: 6rem;
+            font-size: 2.5rem;
+            border: none;
+            outline: none;
+            text-align: center;
+            border-radius: 6px 0 0 6px;
+            font-weight: 600;
+            -webkit-appearance: textfield;
+        }
+        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+
+        .fillInput span{
+            background-color: #1F1D23;
+            color: white;
+            font-size: 3rem;
+            height: 6rem;
+            aspect-ratio: 1/1;
+            line-height: 6rem;
+            text-align: center;
+            border-radius: 0 6px 6px 0;
+            
+        }
+        .btn{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            margin-top: 50px;
+            flex: 1;
+        }
+        .btn button{
+            padding: 1rem 3rem;
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            font-size: 2.4rem;
+            border-radius: 10px;
+            transition: 0.3s linear;
+            cursor: pointer;
+        }
+        .btn button:hover{
+            background-color: #351D49;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+        @media (max-width: 550px) {
+            html{
+                font-size: 53%;
+            }
+        }
+        @media (max-width: 400px) {
+            html{
+                font-size: 40%;
+            }
+        }
